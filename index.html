@@ -1,183 +1,26 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Wael Download Manager</title>
-<style>
-  :root{
-    --bg:#0e0e12;
-    --card:#17171e;
-    --card2:#21212b;
-    --accent:#ff0033;
-    --accent-hover:#cc0029;
-    --text:#f2f2f5;
-    --text-dim:#8b8b9a;
-    color-scheme: dark;
-  }
-  @media (prefers-color-scheme: light){
-    :root:not([data-theme="dark"]){
-      --bg:#f5f5f7;
-      --card:#ffffff;
-      --card2:#eeeef2;
-      --text:#15151a;
-      --text-dim:#5a5a66;
-    }
-  }
-  *{box-sizing:border-box;}
-  html,body{height:100%;margin:0;}
-  :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Segoe UI', Tahoma, Arial, sans-serif;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    min-height:100%;
-    padding:40px 16px 60px;
-  }
-  .logo-badge{
-    width:84px;height:84px;border-radius:22px;
-    background:linear-gradient(135deg, var(--accent), #ff5577);
-    display:flex;align-items:center;justify-content:center;
-    font-size:40px;margin-bottom:18px;
-    box-shadow:0 8px 24px rgba(255,0,51,.35);
-  }
-  h1{
-    font-size:2.1rem;margin:0 0 6px;text-align:center;
-    letter-spacing:.5px;
-  }
-  h1 span{color:var(--accent);}
-  .tagline{
-    color:var(--text-dim);
-    text-align:center;
-    margin:0 0 30px;
-    font-size:1.05rem;
-    max-width:520px;
-  }
-  .by{
-    font-size:.85rem;color:var(--text-dim);margin-bottom:34px;
-  }
-  .by b{color:var(--text);}
-  .download-btn{
-    display:inline-flex;align-items:center;gap:10px;
-    background:var(--accent);color:#fff;
-    padding:16px 42px;border-radius:14px;
-    font-size:1.2rem;font-weight:700;
-    text-decoration:none;
-    box-shadow:0 10px 28px rgba(255,0,51,.35);
-    transition:transform .15s ease, background .15s ease;
-  }
-  .download-btn:hover{background:var(--accent-hover);transform:translateY(-2px);}
-  .meta{
-    margin-top:14px;color:var(--text-dim);font-size:.85rem;
-  }
-  .features{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:16px;max-width:820px;width:100%;margin:56px 0 10px;
-  }
-  .feature{
-    background:var(--card);border:1px solid var(--card2);
-    border-radius:16px;padding:22px 18px;text-align:center;
-  }
-  .feature .icon{font-size:1.8rem;margin-bottom:10px;}
-  .feature h3{margin:0 0 6px;font-size:1rem;}
-  .feature p{margin:0;color:var(--text-dim);font-size:.85rem;line-height:1.5;}
-  .ad-slot{
-    width:100%;max-width:820px;
-    min-height:100px;
-    margin:40px 0;
-    border:1px dashed var(--card2);
-    border-radius:12px;
-    display:flex;align-items:center;justify-content:center;
-    color:var(--text-dim);font-size:.8rem;
-    background:var(--card);
-  }
-  .platforms{
-    display:flex;flex-wrap:wrap;gap:18px;justify-content:center;
-    max-width:820px;width:100%;margin:46px 0 10px;
-  }
-  .platform-card{
-    flex:1;min-width:240px;
-    background:var(--card);border:1px solid var(--card2);
-    border-radius:18px;padding:28px 22px;text-align:center;
-  }
-  .platform-card .picon{font-size:2.2rem;margin-bottom:10px;}
-  .platform-card h2{margin:0 0 8px;font-size:1.15rem;}
-  .platform-card p{margin:0 0 18px;color:var(--text-dim);font-size:.85rem;}
-  .download-btn-sm{
-    display:inline-flex;align-items:center;gap:8px;
-    background:var(--accent);color:#fff;
-    padding:12px 28px;border-radius:12px;
-    font-size:1rem;font-weight:700;
-    text-decoration:none;
-    transition:transform .15s ease, background .15s ease;
-  }
-  .download-btn-sm:hover{background:var(--accent-hover);transform:translateY(-2px);}
-  .platform-card .meta{margin-top:10px;}
-  .section-title{
-    margin:50px 0 6px;font-size:1.3rem;text-align:center;
-  }
-  footer{
-    margin-top:40px;color:var(--text-dim);font-size:.8rem;text-align:center;
-  }
-  footer a{color:var(--text-dim);}
-</style>
-</head>
-<body>
-
-  <div class="logo-badge">⬇️</div>
-  <h1>Wael <span>Download Manager</span></h1>
-  <p class="tagline">برنامج بسيط وسريع لتحميل الفيديوهات من أكثر من 1800 موقع، بصيغة MP4 أو MP3، بجودة عالية وبدون تعقيد.</p>
-  <div class="by">تطوير <b>Wael</b></div>
-
-  <a class="download-btn" href="https://www.mediafire.com/file/ymbnmukigmp5olo/WAEL_DOWNLOADER_Setup.exe/file" target="_blank" rel="noopener">
-    ⬇ تحميل البرنامج
-  </a>
-  <div class="meta">للويندوز • مجاني بالكامل • النسخة الحالية v1.5.0</div>
-
-  <h2 class="section-title">اختر منصتك</h2>
-  <div class="platforms">
-    <div class="platform-card">
-      <div class="picon">🖥️</div>
-      <h2>ويندوز</h2>
-      <p>النسخة المكتبية الكاملة، ببرنامج تثبيت سهل بخطوة واحدة.</p>
-      <a class="download-btn-sm" href="https://www.mediafire.com/file/ymbnmukigmp5olo/WAEL_DOWNLOADER_Setup.exe/file" target="_blank" rel="noopener">⬇ تحميل لويندوز</a>
-      <div class="meta">النسخة الحالية v1.5.0</div>
-    </div>
-    <div class="platform-card">
-      <div class="picon">📱</div>
-      <h2>أندرويد</h2>
-      <p>طبّق نفس الميزات من جوالك، بتصميم أنيق وواجهة عربية كاملة.</p>
-      <a class="download-btn-sm" href="https://github.com/waeldaher109-commits/wael-downloader-android/releases/download/v3.3/WaelDownloader-3.3.apk" target="_blank" rel="noopener">⬇ تحميل لأندرويد</a>
-      <div class="meta">النسخة الحالية v3.3</div>
-    </div>
-  </div>
-
-  <div class="features">
-    <div class="feature">
-      <div class="icon">🎬</div>
-      <h3>فيديو وصوت</h3>
-      <p>حمّل الفيديو بصيغة MP4 أو حوّله مباشرة إلى MP3 بجودة تختارها بنفسك.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">🌐</div>
-      <h3>+1800 موقع</h3>
-      <p>يدعم يوتيوب وغيره من المنصات الشهيرة بميزة اكتشاف الرابط التلقائي.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">🔄</div>
-      <h3>تحديثات مستمرة</h3>
-      <p>البرنامج يتحقق تلقائياً من وجود إصدار أحدث ويعلمك بذلك.</p>
-    </div>
-  </div>
-
-  <div class="ad-slot">مساحة إعلانية</div>
-
-  <footer>
-    جميع الحقوق محفوظة &copy; Wael Download Manager
-  </footer>
-
-</body>
-</html>
+⬇️
+Wael Download Manager
+برنامج بسيط وسريع لتحميل الفيديوهات من أكثر من 1800 موقع، بصيغة MP4 أو MP3، بجودة عالية وبدون تعقيد.
+تطوير Wael
+⬇ تحميل البرنامج
+للويندوز • مجاني بالكامل • النسخة الحالية v1.5.0
+اختر منصتك
+🖥️
+ويندوز
+النسخة المكتبية الكاملة، ببرنامج تثبيت سهل بخطوة واحدة.
+اضغط لعرض التفاصيل ⌄
+📱
+أندرويد
+طبّق نفس الميزات من جوالك، بتصميم أنيق وواجهة عربية كاملة.
+اضغط لعرض التفاصيل ⌄
+🎬
+فيديو وصوت
+حمّل الفيديو بصيغة MP4 أو حوّله مباشرة إلى MP3 بجودة تختارها بنفسك.
+🌐
++1800 موقع
+يدعم يوتيوب وغيره من المنصات الشهيرة بميزة اكتشاف الرابط التلقائي.
+🔄
+تحديثات مستمرة
+البرنامج يتحقق تلقائياً من وجود إصدار أحدث ويعلمك بذلك.
+مساحة إعلانية
+جميع الحقوق محفوظة © Wael Download Manager
